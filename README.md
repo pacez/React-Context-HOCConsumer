@@ -5,7 +5,7 @@
 
 ### install:
 ```
-    npm i react-context-hocconsumer --save
+npm i react-context-hocconsumer --save
 ```
 
 
