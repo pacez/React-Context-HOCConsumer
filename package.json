@@ -1,6 +1,6 @@
 {
   "name": "react-context-hocconsumer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "基于React.createContext实现的简单封装,主要提供了Consumer的高阶组件，用于向子组件props注入上下文， 支持对上下文解析后挂载到props。如果你使用Redux的connect,应该很容易上手。",
   "main": "lib/index.js",
   "scripts": {
@@ -36,7 +36,6 @@
     "cross-env": "^5.2.0",
     "import": "^0.0.6",
     "npm-run-all": "^4.1.5",
-    "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.1.14"
