@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 
-// 导出根节点上下文对象，并设置默认上下文
 const ReactContext = (store) => {
 
     const Context = React.createContext(store);
