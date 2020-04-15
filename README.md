@@ -14,28 +14,26 @@ npm i react-context-hocconsumer --save
 定义RootContext.js
 ```javascript  
 import ReactContext from 'react-context-hocconsumer';
-const RootContext =  ReactContext() //同React.createContext可接收defautValue
+export const defaultStore = {name:'pace'} 
+const RootContext =  ReactContext(defaultStore) //同React.createContext可接收defautValue
 export default RootContext;
+export const Provider = RootContext.Provider;
+export const Consumer = RootContext.Consumer;
 ```
 
 父组件:ParentComponent
 ```javascript  
-/**
- * 上下文： {name:'pace'} 
- */
 import React, { PureComponent } from 'react';
-import RootContext from './RootContext';
+import {Provider,defaultStore} from './RootContext';
 import SubComponent from './SubComponent';
-const defaultStore = {name:'pace'};
-const { Provider } = RootContext(defaultStore); // 根据业务需求决定是否要设置默认值
 export default class ParentComponent extends PureComponent {
 
     state = {
-        store: defaultStore,
+        store: defaultStore, 
     }
 
     render() {
-        return <Provider value={this.state.store}>
+        return <Provider value={this.state.store}>  {/** 挂载store */}
             <SubComponent /> 
         </Provider>
     }
@@ -44,12 +42,8 @@ export default class ParentComponent extends PureComponent {
 
 子组件:SubComponent，直接使用@Consumer，上下文全量挂载到props.store。
 ```javascript  
-/**
- * 上下文： {name:'pace'} 
- */
 import React, { PureComponent } from 'react';
-import RootContext from './RootContext';
-const { Consumer } = RootContext;
+import {Consumer} from './RootContext';
 @Consumer
 export default class SubComponent extends PureComponent {
     render() {
@@ -62,12 +56,8 @@ export default class SubComponent extends PureComponent {
 
 子组件:SubComponent，根据业务解析有用的上下文内容到组件的props
 ```javascript  
-/**
- * 上下文： {name:'pace'} 
- */
 import React, { PureComponent } from 'react';
-import RootContext from './RootContext';
-const { Consumer } = RootContext;
+import {Consumer} from './RootContext';
 @Consumer(context => （{
     name: context.name  
 })）    
