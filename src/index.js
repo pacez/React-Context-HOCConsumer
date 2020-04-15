@@ -11,7 +11,8 @@ const ReactContext = (store) => {
      */
 
     const Consumer = (contextParser) => {
-        const isReactComponent = contextParser.prototype instanceof React.Component
+        const isReactComponent = contextParser.prototype.isReactComponent
+
         const WrapCp = (Component) => {
             class ConsumerComponet extends PureComponent {
                 render() {
