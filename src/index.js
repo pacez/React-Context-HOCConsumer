@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 
 const ReactContext = (store) => {
 
@@ -14,7 +14,7 @@ const ReactContext = (store) => {
         const isReactComponent = contextParser.prototype.isReactComponent
 
         const WrapCp = (Component) => {
-            class ConsumerComponet extends PureComponent {
+            class ConsumerComponet extends React.Component {
                 render() {
                     return <Context.Consumer>
                         {
