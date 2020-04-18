@@ -59,7 +59,7 @@ export default class SubComponent extends PureComponent {
 }
 ```
 
-解析需求的上下文到props
+解析必要的上下文到props
 ```javascript  
 import React, { PureComponent } from 'react';
 import {Consumer} from './RootContext';
