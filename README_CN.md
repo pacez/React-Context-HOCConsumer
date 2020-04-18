@@ -1,9 +1,9 @@
 # react-context-hocconsumer
 
+[English](https://github.com/pacez/React-Context-HOCConsumer#readme)
+
 基于React.createContext实现的简单封装,提供了Consumer的高阶组件，用于向子组件props注入上下文，
 支持对上下文解析后挂载到props。如果你使用Redux的connect,应该很容易上手。
-
-[English](https://github.com/pacez/React-Context-HOCConsumer#readme)
 
 * 注：React版本 >= 16.3
 
