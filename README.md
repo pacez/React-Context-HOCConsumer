@@ -17,7 +17,7 @@ Define a common context. Filename: RootContext.js
 ```javascript  
 import ReactContext from 'react-context-hocconsumer';
 export const defaultStore = {name:'pace'} 
-const RootContext =  ReactContext(defaultStore) //同React.createContext可接收defautValue
+const RootContext =  ReactContext(defaultStore) //Default values are optional
 export default RootContext;
 export const Provider = RootContext.Provider;
 export const Consumer = RootContext.Consumer;
