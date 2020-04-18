@@ -1,20 +1,22 @@
 # react-context-hocconsumer
 
-Simple encapsulation based on the React.createContext, provides a HOC of Consumer, Supports mounting props after context resolution. If you use Redux's connect, it should be easy to get started.
+基于React.createContext实现的简单封装,提供了Consumer的高阶组件，用于向子组件props注入上下文，
+支持对上下文解析后挂载到props。如果你使用Redux的connect,应该很容易上手。
 
-* required：React >= 16.3
+English[https://github.com/pacez/React-Context-HOCConsumer#readme]
 
-中文文档[https://github.com/pacez/React-Context-HOCConsumer#readme]
+* 注：React版本 >= 16.3
 
-### install:
+### 安装:
 ```
 npm i react-context-hocconsumer --save
 ```
 
 
-### usage:
-Define a common context
-Filename: RootContext.js
+### 用例:
+
+定义公共上下文
+文件名：RootContext.js
 ```javascript  
 import ReactContext from 'react-context-hocconsumer';
 export const defaultStore = {name:'pace'} 
@@ -24,7 +26,7 @@ export const Provider = RootContext.Provider;
 export const Consumer = RootContext.Consumer;
 ```
 
-The parent component: The component that manages the context, the Provider entry.
+父组件: 管理上下文的组件，Provider入口。
 ```javascript  
 import React, { PureComponent } from 'react';
 import {Provider,defaultStore} from './RootContext';
@@ -43,7 +45,7 @@ export default class ParentComponent extends PureComponent {
 }
 ```
 
-Basic usage, The context is mounted to the store by default
+基本用法, 默认情况下，上下文被挂载到store
 ```javascript  
 import React, { PureComponent } from 'react';
 import {Consumer} from './RootContext';
@@ -57,7 +59,7 @@ export default class SubComponent extends PureComponent {
 }
 ```
 
-Resolve the context of the requirements to props
+解析需求的上下文到props
 ```javascript  
 import React, { PureComponent } from 'react';
 import {Consumer} from './RootContext';
