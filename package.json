@@ -1,7 +1,7 @@
 {
   "name": "react-context-hocconsumer",
-  "version": "1.0.11",
-  "description": "基于React.createContext实现的简单封装,主要提供了Consumer的高阶组件，用于向子组件props注入上下文， 支持对上下文解析后挂载到props。如果你使用Redux的connect,应该很容易上手。",
+  "version": "1.0.13",
+  "description": "Simple encapsulation based on the React.createContext, provides a HOC of Consumer, Supports mounting props after context resolution. If you use Redux's connect, it should be easy to get started.",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,9 +12,11 @@
     "url": "git+https://github.com/pacez/React-Context-HOCConsumer.git"
   },
   "keywords": [
-    "React.createContext",
+    "React",
+    "Context",
     "Cunsumer",
-    "HOC"
+    "HOC",
+    "React.createContext"
   ],
   "author": "pace_zhong@foxmail.com",
   "license": "MIT",
