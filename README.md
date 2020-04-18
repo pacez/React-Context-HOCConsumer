@@ -4,7 +4,7 @@ Simple encapsulation based on the React.createContext, provides a HOC of Consume
 
 * required：React >= 16.3
 
-中文文档[https://github.com/pacez/React-Context-HOCConsumer#readme]
+[中文文档](https://github.com/pacez/React-Context-HOCConsumer/blob/master/README_CN.md#readme)
 
 ### install:
 ```
