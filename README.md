@@ -13,8 +13,7 @@ npm i react-context-hocconsumer --save
 
 
 ### usage:
-Define a common context
-Filename: RootContext.js
+Define a common context. Filename: RootContext.js
 ```javascript  
 import ReactContext from 'react-context-hocconsumer';
 export const defaultStore = {name:'pace'} 
