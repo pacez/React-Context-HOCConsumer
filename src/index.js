@@ -1,14 +1,15 @@
+/**
+ * Authoer: pace_zhong@foxmail.com
+ * Name: 'react-context-hocconsumer'
+ * Desc: 基于React.createContext实现的Consumer高阶组件. 将上下文注入到组件的props中。
+ * Usage: 推荐修饰器用法，@Consumer, 组件从props中获取注入的上下文,默认挂载点统一为store，如果使用了contextParser，按照contextParser解析结构挂载props.
+ */
+
 import React from 'react';
 
 const ReactContext = (store) => {
 
     const Context = React.createContext(store);
-
-    /**
-     * Name: Consumer
-     * Desc: Consumer高阶组件，给子组件props注入上下文
-     * Usage: 推荐修饰器用法：@Consumer, 组件从props中获取注入的上下文,默认挂载点统一为store，如果使用了contextParser，按照contextParser解析结构挂载props.
-     */
 
     const Consumer = (contextParser) => {
         const isReactComponent = contextParser.prototype.isReactComponent

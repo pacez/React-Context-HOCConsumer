@@ -60,9 +60,9 @@ Resolve the context of the requirements to props
 ```javascript  
 import React, { PureComponent } from 'react';
 import {Consumer} from './RootContext';
-@Consumer(context => （{
+@Consumer(context =>({
     name: context.name  
-})）    
+}))
 export default class SubComponent extends PureComponent {
     render() {
         return <div>
@@ -71,4 +71,5 @@ export default class SubComponent extends PureComponent {
     }
 }
 ```
+
 

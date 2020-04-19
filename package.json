@@ -1,6 +1,6 @@
 {
   "name": "react-context-hocconsumer",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Simple encapsulation based on the React.createContext, provides a HOC of Consumer, Supports mounting props after context resolution. If you use Redux's connect, it should be easy to get started.",
   "main": "lib/index.js",
   "scripts": {

@@ -49,6 +49,8 @@ export default class ParentComponent extends PureComponent {
 ```javascript  
 import React, { PureComponent } from 'react';
 import {Consumer} from './RootContext';
+
+// 推荐用法
 @Consumer
 export default class SubComponent extends PureComponent {
     render() {
@@ -57,15 +59,20 @@ export default class SubComponent extends PureComponent {
         </div>
     }
 }
+
+// 其他用法 
+Consumer(SubComponent);
 ```
 
 解析必要的上下文到props
 ```javascript  
 import React, { PureComponent } from 'react';
 import {Consumer} from './RootContext';
-@Consumer(context => （{
+
+// 推荐用法
+@Consumer(context => ({
     name: context.name  
-})）    
+}))
 export default class SubComponent extends PureComponent {
     render() {
         return <div>
@@ -73,6 +80,9 @@ export default class SubComponent extends PureComponent {
         </div>
     }
 }
+
+// 其他用法
+Consumer(context => ({
+    name: context.name  
+}))(SubComponent)
 ```
-
-
